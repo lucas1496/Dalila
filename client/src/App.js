@@ -5,7 +5,7 @@ import Home from './Components/Home/Home';
 import Login from './Components/Auth/Login';
 import Register from './Components/Auth/Register';
 import Navbar from './Components/Navbar/Navbar';
-import Footer from './Components/Footer/Footer'
+import Footer from './Components/Footer/Footer';
 import NotFound from './Components/NotFound/NotFound';
 import { Provider } from 'react-redux';
 import store from './redux/store';
@@ -53,3 +53,5 @@ function App() {
 }
 
 export default App;
+
+// Comment to test branch set-up
