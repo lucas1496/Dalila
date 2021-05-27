@@ -5,6 +5,7 @@ import Home from './Components/Home/Home';
 import Login from './Components/Auth/Login';
 import Register from './Components/Auth/Register';
 import Navbar from './Components/Navbar/Navbar';
+import Footer from './Components/Footer/Footer'
 import NotFound from './Components/NotFound/NotFound';
 import { Provider } from 'react-redux';
 import store from './redux/store';
@@ -45,6 +46,7 @@ function App() {
           </Switch>
           <Route path="*" component={NotFound} />
         </Switch>
+        <Footer />
       </Router>
     </Provider>
   );

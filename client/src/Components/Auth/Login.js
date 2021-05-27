@@ -54,7 +54,7 @@ class Login extends Component {
             <div className="col-lg-6">
               <div className="login-left">
                 <h4 className="text-capitalize">
-                  Please login to enjoy DALILA
+                  Please login to enjoy <kbd>DALILA</kbd>
                 </h4>
               </div>
             </div>
