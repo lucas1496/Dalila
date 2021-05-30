@@ -1,0 +1,22 @@
+* {
+    color: white;
+}
+.question-section{
+    padding-top: 10%;
+    padding-bottom: 5%;
+}
+.score-results{
+    padding-top: 10%;
+    padding-bottom: 5%;
+}
+
+.Quiz{
+    background-color: rgb(20,36,63);
+    height: 100vh;
+}
+button{
+    background-color:grey ;
+    color:white !important;
+    margin: 3%;
+    border-radius: 10%; 
+}

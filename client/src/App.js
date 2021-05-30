@@ -14,6 +14,7 @@ import setAuthToken from './utils/setAuthToken';
 import { setCurrentUser, logoutUser } from './redux/actions/authActions';
 import PrivateRoute from './Components/private-route/PrivateRoute';
 import Dashboard from './Components/Dashboard/Dashboard';
+import Quiz from './Components/Quiz/Quiz.js'
 
 function App() {
   // Check for token to keep user logged in
@@ -36,10 +37,12 @@ function App() {
     <Provider store={store}>
       <Router>
         <Navbar />
+        
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/register" component={Register} />
           <Route path="/login" component={Login} />
+          <Route path="/quiz" component={Quiz} />
           <Switch>
             <PrivateRoute exact path="/dashboard" component={Dashboard} />
             <Route path="*" component={NotFound} />
