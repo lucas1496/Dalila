@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { logoutUser } from '../../redux/actions/authActions';
 import './Dashboard.css';
+import { Link, withRouter } from 'react-router-dom';
 
 class Dashboard extends Component {
   onLogoutClick = e => {
@@ -30,6 +31,12 @@ class Dashboard extends Component {
                 >
                   Logout
                 </button>
+                <p>
+                        Ready to start?
+                        <Link to="/quiz" className="text-success">
+                          Start Quiz
+                        </Link>
+                      </p>
               </div>
             </div>
           </div>
