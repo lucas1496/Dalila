@@ -3,7 +3,11 @@ nav {
     font-family: var(--Oswald);
     letter-spacing: 1px;
 }
+
+
+
 .navbar-brand {
+    color: #FFEBD0 !important;
     font-weight: bolder;
     letter-spacing: 2px;
 }
@@ -15,11 +19,11 @@ nav {
 }
 
 .btn-login {
-    background-color: #fff;
+    background-color: #FFEBD0;
     color: #000000 !important;
 }
 
 .btn-register {
-    background-color: rgb(233, 159, 0);
+    background-color: #FFEBD0;
     color: #000000 !important;
 }
