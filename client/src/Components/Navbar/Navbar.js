@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
+import logo from "../../assets/dalilalogo.png"
 import './Navbar.css';
 
 class Navbar extends Component {
@@ -8,7 +9,7 @@ class Navbar extends Component {
       <nav className="navbar navbar-expand-md navbar-dark fixed-top">
         <div className="container">
           <Link className="navbar-brand border-none" to="/">
-            DALILA
+            <img src= {logo} />
           </Link>
           <button
             className="navbar-toggler d-lg-none"
