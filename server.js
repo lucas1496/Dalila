@@ -40,6 +40,7 @@ if (process.env.NODE_ENV = "production") {
 }
  */
 
+<<<<<<< HEAD
 app.post("/dashboard", (req, res) => {
     //pass code
     const code = req.body.code
@@ -67,4 +68,7 @@ app.post("/dashboard", (req, res) => {
     })
 
 const port = process.env.PORT || 5000;
+=======
+const port = process.env.PORT || 3001;
+>>>>>>> main
 app.listen(port, () => console.log(`Server up and running on port ${port} !`));

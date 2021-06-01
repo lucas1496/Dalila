@@ -5,7 +5,7 @@ import Home from './Components/Home/Home';
 import Login from './Components/Auth/Login';
 import Register from './Components/Auth/Register';
 import Navbar from './Components/Navbar/Navbar';
-import Footer from './Components/Footer/Footer'
+import Footer from './Components/Footer/Footer';
 import NotFound from './Components/NotFound/NotFound';
 import { Provider } from 'react-redux';
 import store from './redux/store';
@@ -14,12 +14,16 @@ import setAuthToken from './utils/setAuthToken';
 import { setCurrentUser, logoutUser } from './redux/actions/authActions';
 import PrivateRoute from './Components/private-route/PrivateRoute';
 import Dashboard from './Components/Dashboard/Dashboard';
+<<<<<<< HEAD
 import Search from './Components/Search/Search';
 import Quiz from './Components/Quiz/Quiz';
 import Tracks from './Components/Tracks/Tracks'
 
 //pass code in window.location.search
 const code = new URLSearchParams(window.location.search).get("code")
+=======
+import Quiz from './Components/Quiz/Quiz.js'
+>>>>>>> main
 
 function App() {
   // Check for token to keep user logged in
@@ -42,10 +46,12 @@ function App() {
     <Provider store={store}>
       <Router>
         <Navbar />
+        
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/register" component={Register} />
           <Route path="/login" component={Login} />
+<<<<<<< HEAD
           <Route path="/search" component={Search} />
           <Route path="/quiz" component={Quiz} />
           <Route path="/tracks" component={Tracks} />
@@ -53,6 +59,9 @@ function App() {
           { code ? <Dashboard code={code}></Dashboard> : <Login />}
           </Route> */}
          
+=======
+          <Route path="/quiz" component={Quiz} />
+>>>>>>> main
           <Switch>
             <PrivateRoute exact path="/dashboard" component={Dashboard} />
             
@@ -67,3 +76,5 @@ function App() {
 }
 
 export default App;
+
+// Comment to test branch set-up

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
+import logo from "../../assets/dalilalogo.png"
 import './Navbar.css';
 
 class Navbar extends Component {
@@ -8,7 +9,11 @@ class Navbar extends Component {
       <nav className="navbar navbar-expand-md navbar-dark fixed-top">
         <div className="container">
           <Link className="navbar-brand border-none" to="/">
+<<<<<<< HEAD
             DALILA
+=======
+            <img src= {logo} />
+>>>>>>> main
           </Link>
           <button
             className="navbar-toggler d-lg-none"
@@ -29,6 +34,7 @@ class Navbar extends Component {
                 </Link>
               </li> */}
               <li className="nav-item">
+<<<<<<< HEAD
                 <Link
                   className="nav-link btn btn-login button-outline-none"
                   to="/search"
@@ -45,6 +51,8 @@ class Navbar extends Component {
                 </Link>
               </li>
               <li className="nav-item">
+=======
+>>>>>>> main
                 <Link
                   className="nav-link btn btn-login button-outline-none"
                   to="/login"

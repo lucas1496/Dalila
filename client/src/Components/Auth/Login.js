@@ -48,6 +48,9 @@ class Login extends Component {
   render() {
     const { email, password, errors } = this.state;
     return (
+      <div className="bigcontainerLogin">
+      <iframe src='https://my.spline.design/setuppage-ae402cfdb7f2fc5d7b9ef0d3579062a3/' frameborder='0' width='100%' height='100%'></iframe>
+        <div className ="contentcontainerLogin">
       <section className="login">
         <div className="container">
           <div className="row">
@@ -113,12 +116,19 @@ class Login extends Component {
                       </button>
                     </div>
                   </div>
+<<<<<<< HEAD
                   <div className="form-row">
                     <div className="form-group col-md-12">
                       <p>
+=======
+                  <div class="form-row">
+                    <div class="form-group col-md-12">
+                      <p class="text-dark">
+>>>>>>> main
                         Don't have an account?
+                        <br></br>
                         <Link to="/register" className="text-success">
-                           Create one!
+                            Create one!
                         </Link>
                       </p>
                     </div>
@@ -129,6 +139,8 @@ class Login extends Component {
           </div>
         </div>
       </section>
+      </div>
+      </div>
     );
   }
 }

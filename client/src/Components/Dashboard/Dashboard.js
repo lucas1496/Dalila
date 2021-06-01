@@ -4,9 +4,12 @@ import { connect } from 'react-redux';
 import { logoutUser } from '../../redux/actions/authActions';
 import './Dashboard.css';
 import { Link, withRouter } from 'react-router-dom';
+<<<<<<< HEAD
 
 //The GET request is sent to the /authorize endpoint of the Accounts service
 const AUTH_URL = "https://accounts.spotify.com/authorize?client_id=60fdc8cbb7ec4a3b99b95a77309e567c&response_type=code&redirect_uri=http://localhost:8080&scope=streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state"
+=======
+>>>>>>> main
 
 class Dashboard extends Component {
   onLogoutClick = e => {
@@ -46,6 +49,7 @@ class Dashboard extends Component {
                           Start Quiz
                         </Link>
                       </p>
+<<<<<<< HEAD
                       <p>
                         Ready to start?
                         <Link to="/tracks" className="text-success">
@@ -56,6 +60,8 @@ class Dashboard extends Component {
     <a className="btn btn-success btn-lg" href={AUTH_URL}>
       Search With Spotify
     </a>
+=======
+>>>>>>> main
               </div>
             </div>
           </div>
