@@ -14,6 +14,9 @@ class Dashboard extends Component {
   render() {
     const { user } = this.props.auth;
     return (
+      <div className="bigcontainerLogged">
+      <iframe src='https://my.spline.design/loggedin-1825477584b930b7dee21233721b9765/' frameborder='0' width='100%' height='100%'></iframe>
+        <div className ="contentcontainerLogged">
       <section className="dashboard">
         <div className="container">
           <div className="row">
@@ -31,8 +34,9 @@ class Dashboard extends Component {
                 >
                   Logout
                 </button>
-                <p>
+                <p className="text-center">
                         Ready to start?
+                        <br></br>
                         <Link to="/quiz" className="text-success">
                           Start Quiz
                         </Link>
@@ -42,6 +46,8 @@ class Dashboard extends Component {
           </div>
         </div>
       </section>
+      </div>
+      </div>
     );
   }
 }
