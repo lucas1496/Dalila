@@ -14,16 +14,7 @@ import setAuthToken from './utils/setAuthToken';
 import { setCurrentUser, logoutUser } from './redux/actions/authActions';
 import PrivateRoute from './Components/private-route/PrivateRoute';
 import Dashboard from './Components/Dashboard/Dashboard';
-<<<<<<< HEAD
-import Search from './Components/Search/Search';
-import Quiz from './Components/Quiz/Quiz';
-import Tracks from './Components/Tracks/Tracks'
-
-//pass code in window.location.search
-const code = new URLSearchParams(window.location.search).get("code")
-=======
 import Quiz from './Components/Quiz/Quiz.js'
->>>>>>> main
 
 function App() {
   // Check for token to keep user logged in
@@ -51,20 +42,9 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route path="/register" component={Register} />
           <Route path="/login" component={Login} />
-<<<<<<< HEAD
-          <Route path="/search" component={Search} />
           <Route path="/quiz" component={Quiz} />
-          <Route path="/tracks" component={Tracks} />
-          {/* <Route>
-          { code ? <Dashboard code={code}></Dashboard> : <Login />}
-          </Route> */}
-         
-=======
-          <Route path="/quiz" component={Quiz} />
->>>>>>> main
           <Switch>
             <PrivateRoute exact path="/dashboard" component={Dashboard} />
-            
             <Route path="*" component={NotFound} />
           </Switch>
           <Route path="*" component={NotFound} />

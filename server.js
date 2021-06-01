@@ -40,35 +40,5 @@ if (process.env.NODE_ENV = "production") {
 }
  */
 
-<<<<<<< HEAD
-app.post("/dashboard", (req, res) => {
-    //pass code
-    const code = req.body.code
-    // authorization information
-    const spotifyApi = new SpotifyWebApi({
-      redirectUri: 'http://localhost:8080',
-      clientId: '4fa3f8755d384650b48a71b1ce8277df',
-      clientSecret: 'c92e66282fd24aeb8ddc39f6aa20a9ca'
-    })
-// res token
-    spotifyApi
-    .authorizationCodeGrant(code)
-    .then(data => {
-      res.json({
-        accessToken: data.body.access_token,
-        refreshToken: data.body.refresh_token,
-        expiresIn: data.body.expires_in,
-      })
-    })
-    .catch(err => {
-        console.log(err)
-        res.sendStatus(400)
-      })
-
-    })
-
-const port = process.env.PORT || 5000;
-=======
 const port = process.env.PORT || 3001;
->>>>>>> main
 app.listen(port, () => console.log(`Server up and running on port ${port} !`));

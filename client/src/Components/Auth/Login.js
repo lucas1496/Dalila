@@ -65,8 +65,8 @@ class Login extends Component {
               <div className="login-right">
                 <h1>Login</h1>
                 <form noValidate onSubmit={this.loginSubmit}>
-                  <div className="form-row">
-                    <div className="form-group col-md-12">
+                  <div class="form-row">
+                    <div class="form-group col-md-12">
                       <label htmlFor="Email">Email</label> <br />
                       <input
                         type="email"
@@ -87,8 +87,8 @@ class Login extends Component {
                       </span>
                     </div>
                   </div>
-                  <div className="form-row">
-                    <div className="form-group col-md-12">
+                  <div class="form-row">
+                    <div class="form-group col-md-12">
                       <label htmlFor="Password">Password</label> <br />
                       <input
                         type="password"
@@ -109,22 +109,16 @@ class Login extends Component {
                       </span>
                     </div>
                   </div>
-                  <div className="form-row">
-                    <div className="form-group col-md-12">
+                  <div class="form-row">
+                    <div class="form-group col-md-12">
                       <button type="submit" className="btn btn-md btn-register">
                         Login
                       </button>
                     </div>
                   </div>
-<<<<<<< HEAD
-                  <div className="form-row">
-                    <div className="form-group col-md-12">
-                      <p>
-=======
                   <div class="form-row">
                     <div class="form-group col-md-12">
                       <p class="text-dark">
->>>>>>> main
                         Don't have an account?
                         <br></br>
                         <Link to="/register" className="text-success">
