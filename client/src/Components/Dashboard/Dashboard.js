@@ -37,6 +37,12 @@ class Dashboard extends Component {
                           Start Quiz
                         </Link>
                       </p>
+                      <p>
+                        Ready to Search?
+                        <Link to="/searchplaylists" className="text-success">
+                          Start Search Playlist
+                        </Link>
+                      </p>
               </div>
             </div>
           </div>
