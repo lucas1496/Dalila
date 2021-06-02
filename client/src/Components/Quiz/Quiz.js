@@ -7,47 +7,47 @@ export default function StartQuiz() {
         {
             questionText: 'Which animal do you like the most?',
             answerOptions: [
-                { answerText: 'Hippopotamus', isCorrect: false },
-                { answerText: 'Cat', isCorrect: false },
-                { answerText: 'Wolf', isCorrect: false },
-                { answerText: 'Kangaroo', isCorrect: true },
+                { answerText: 'Hippopotamus', musicType: 'rock' },
+                { answerText: 'Cat', musicType: 'pop' },
+                { answerText: 'Wolf', musicTypet: 'hiphop' },
+                { answerText: 'kangaroo', musicType: 'electronic' },
             ],
         },
         {
             questionText: 'Which activity would you rather do?',
             answerOptions: [
-                { answerText: 'Wine tasting', isCorrect: false },
-                { answerText: 'Weapon Forging', isCorrect: false },
-                { answerText: 'Working out', isCorrect: false },
-                { answerText: 'Clubbing', isCorrect: true },
+                { answerText: 'Wine tasting', musicType: 'pop' },
+                { answerText: 'Weapon Forging', musicType: 'rock' },
+                { answerText: 'Working out', musicType: 'hiphop' },
+                { answerText: 'Clubbing', musicType: 'electronic' },
             ],
         },
         {
             questionText: 'Which instrument are you most interested in?',
             answerOptions: [
-                { answerText: 'I rather sing than play an instrument', isCorrect: false },
-                { answerText: 'Drums', isCorrect: false },
-                { answerText: 'Piano', isCorrect: false },
-                { answerText: 'Didgeridoo', isCorrect: true },
+                { answerText: 'I rather sing than play an instrument', musicType: 'pop' },
+                { answerText: 'Drums', musicType: 'rock' },
+                { answerText: 'Piano', musicType: 'hiphop' },
+                { answerText: 'Didgeridoo', musicType: 'electronic' },
             ],
 
         },
         {
             questionText: 'Which word best describes you?',
             answerOptions: [
-                { answerText: 'Outgoing', isCorrect: false },
-                { answerText: 'Persistent', isCorrect: false },
-                { answerText: 'Confident', isCorrect: false },
-                { answerText: 'Creative', isCorrect: true },
+                { answerText: 'Outgoing', musicType: 'pop' },
+                { answerText: 'Persistent', musicType: 'rock' },
+                { answerText: 'Confident', musicType: 'hiphop' },
+                { answerText: 'Creative', musicType: 'electronic' },
             ],
         },
         {
             questionText: 'Which country would you like to visit?',
             answerOptions: [
-                { answerText: 'South Korea', isCorrect: false },
-                { answerText: 'United Kingdom', isCorrect: false },
-                { answerText: 'Mexico', isCorrect: false },
-                { answerText: 'Germany', isCorrect: true },
+                { answerText: 'South Korea', musicType: 'pop' },
+                { answerText: 'United Kingdom', musicType: 'rock' },
+                { answerText: 'Mexico', musicType: 'hiphop' },
+                { answerText: 'Germany', musicType: 'electronic' },
             ],
         },
 
@@ -56,12 +56,44 @@ export default function StartQuiz() {
 
     const [showScore, SetShowScore] = useState(false)
 
-    const handleAnswerButtonClick = () => {
+    const [score, SetScore] = useState({
+        pop: 0,
+        hiphop: 0,
+        rock: 0,
+        electronic: 0
+    })
+
+    const handleAnswerButtonClick = (musicType,) => {
+
+        switch (musicType) {
+            case 'pop':
+
+                SetScore({ ...score, pop: score.pop + 1500, })
+                break;
+
+            case 'rock':
+
+                SetScore({ ...score, rock: score.rock + 1700, })
+                break;
+
+            case 'hiphop':
+
+                SetScore({ ...score, hiphop: score.hiphop + 1900, })
+                break;
+
+            case 'electronic':
+
+                SetScore({ ...score, electronic: score.electronic + 1650, })
+                break;
+
+        }
+
+
         const nextQuestion = currentQuestion + 1;
         if (nextQuestion < questions.length) {
             SetCurrentQuestion(nextQuestion);
         } else {
-            SetShowScore(true)
+            SetShowScore(true) 
         }
 
     }
@@ -72,20 +104,21 @@ export default function StartQuiz() {
         <div className ="contentcontainerQuiz">
         <div className="Quiz"> 
             {showScore ? (
-                <div className='score-results'> here goes your playlist suggestion </div>
+                <div className='score-results d-flex justify-content-center'> here goes your playlist suggestion  {} </div>
             ) : (
                 <>
-                <div className='container'>
-                    <div className='question-section d-flex justify-content-center'>
-                        <div>Dalila wants to know...</div>
+                    <div className='container'>
+                        <div className='question-section d-flex justify-content-center'>
+                            <div>Dalila wants to know...</div>
+                        </div>
+                        <div className='question-text d-flex justify-content-center'>{questions[currentQuestion].questionText}</div>
+                        <div className='answer-section d-flex justify-content-center'>
+                            {questions[currentQuestion].answerOptions.map((answerOption) => (
+                                <button onClick={() => handleAnswerButtonClick(answerOption.musicType)} >{answerOption.answerText}</button>
+                            ))}
+                        </div>
+
                     </div>
-                    <div className='question-text d-flex justify-content-center'>{questions[currentQuestion].questionText}</div>
-                    <div className='answer-section d-flex justify-content-center'>
-                        {questions[currentQuestion].answerOptions.map((answerOption) => (
-                            <button onClick={handleAnswerButtonClick} >{answerOption.answerText}</button>
-                        ))}
-                    </div>
-                </div>
 
                 </>
             )}
