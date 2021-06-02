@@ -58,7 +58,7 @@ class Register extends Component {
             <div className="col-lg-6">
               <div className="signup-left">
                 <h4 className="text-capitalize text-center">
-                  Thanks for registering an account with <kbd>DALILA</kbd>
+                  Thanks for registering an account with <kbd>Dalila</kbd>
                 </h4>
               </div>
             </div>

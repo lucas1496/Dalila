@@ -57,7 +57,7 @@ class Login extends Component {
             <div className="col-lg-6">
               <div className="login-left">
                 <h4 className="text-capitalize">
-                  Please login to enjoy <kbd>DALILA</kbd>
+                  Please login to enjoy <kbd>Dalila</kbd>
                 </h4>
               </div>
             </div>
@@ -93,7 +93,7 @@ class Login extends Component {
                       <input
                         type="password"
                         className="input-control"
-                        placeholder="Enter your password"
+                        placeholder="Enter your password"   
                         id="password"
                         value={password}
                         onChange={this.onChangeLogin}
