@@ -12,7 +12,7 @@ export default function StartQuiz() {
                 { answerText: 'Hippopotamus', musicType: 'rock' },
                 { answerText: 'Cat', musicType: 'pop' },
                 { answerText: 'Wolf', musicType: 'hiphop' },
-                { answerText: 'Kangaroo', musicType: 'country' },
+                { answerText: 'Kangaroo', musicType: 'electronic' },
             ],
         },
         {
@@ -21,7 +21,7 @@ export default function StartQuiz() {
                 { answerText: 'Wine tasting', musicType: 'pop' },
                 { answerText: 'Weapon Forging', musicType: 'rock' },
                 { answerText: 'Working out', musicType: 'hiphop' },
-                { answerText: 'Clubbing', musicType: 'country' },
+                { answerText: 'Clubbing', musicType: 'electronic' },
             ],
         },
         {
@@ -30,7 +30,7 @@ export default function StartQuiz() {
                 { answerText: 'I rather sing than play an instrument', musicType: 'pop' },
                 { answerText: 'Drums', musicType: 'rock' },
                 { answerText: 'Piano', musicType: 'hiphop' },
-                { answerText: 'Didgeridoo', musicType: 'country' },
+                { answerText: 'Didgeridoo', musicType: 'electronic' },
             ],
 
         },
@@ -40,7 +40,7 @@ export default function StartQuiz() {
                 { answerText: 'Outgoing', musicType: 'pop' },
                 { answerText: 'Persistent', musicType: 'rock' },
                 { answerText: 'Confident', musicType: 'hiphop' },
-                { answerText: 'Creative', musicType: 'country' },
+                { answerText: 'Creative', musicType: 'electronic' },
 
             ],
         },
@@ -50,7 +50,7 @@ export default function StartQuiz() {
                 { answerText: 'South Korea', musicType: 'pop' },
                 { answerText: 'United Kingdom', musicType: 'rock' },
                 { answerText: 'Mexico', musicType: 'hiphop' },
-                { answerText: 'Germany', musicType: 'country' },
+                { answerText: 'Germany', musicType: 'electronic' },
 
             ],
         },
@@ -58,47 +58,42 @@ export default function StartQuiz() {
     ];
     const [currentQuestion, SetCurrentQuestion] = useState(0);
 
-    const [developerState, setDeveloperState] = useState({
-        poplevel: 0,
-        rocklevel: 0,
-        hiphoplevel: 0,
-        countrylevel: 0
-    });
-    
     const [showScore, SetShowScore] = useState(false)
 
+    const [score, SetScore] = useState({
+        pop: 0,
+        hiphop: 0,
+        rock: 0,
+        electronic: 0
+    })
+    
 
-    console.log(developerState.poplevel);
-      
+    const [winner, SetWinner] = useState("")
 
-      
     const handleAnswerButtonClick = (musicType,) => {
-          
-      switch(musicType){
-          case 'pop':
 
-            setDeveloperState({...developerState,poplevel: developerState.poplevel + 1,});
-            break;
+        switch (musicType) {
+            case 'pop':
+
+                SetScore({ ...score, pop: score.pop + 1500, })
+                break;
 
             case 'rock':
 
-                setDeveloperState({...developerState,rocklevel: developerState.rocklevel + 1,});
-
+                SetScore({ ...score, rock: score.rock + 1550, })
                 break;
 
             case 'hiphop':
 
+                SetScore({ ...score, hiphop: score.hiphop + 1600, })
+                break;
 
-                setDeveloperState({...developerState,rocklevel: developerState.hiphoplevel + 1900,});
-                    break;
+            case 'electronic':
 
-            case 'country':
+                SetScore({ ...score, electronic: score.electronic + 1650, })
+                break;
 
-                setDeveloperState({...developerState,rocklevel: developerState.country + 1650,});
-                    break;
-
-      }
-        
+        }
 
 
 
@@ -106,10 +101,29 @@ export default function StartQuiz() {
         if (nextQuestion < questions.length) {
             SetCurrentQuestion(nextQuestion);
         } else {
+            // SetShowScore(true);
+            const highestScore = Object.entries(score);
+            console.log(highestScore)
+            let biggest = 0;
+            let categoryWinner = null;
+            for (let i = 0; i < highestScore.length; i++) {
+                if (highestScore[i][1] > biggest) {
+                    biggest = highestScore[i][1];
 
-            SetShowScore(true)
-        }}
+                    categoryWinner = highestScore[i][0];
+                    console.log(categoryWinner);
 
+                    SetWinner(categoryWinner);
+
+                }
+            }
+            SetShowScore(true);
+
+
+
+        }
+
+    }
     return (
         <div className="bigcontainerQuiz">
       <iframe src='https://my.spline.design/quizpage-e26d19a63fcfd20fc847893571ab4270/' frameborder='0' width='100%' height='100%'></iframe>
@@ -118,7 +132,7 @@ export default function StartQuiz() {
 
             {showScore ? (
                 <div>
-                <h3 className='score-results d-flex justify-content-center'> Here is your playlist suggestion!  {} </h3>
+                <h3 className='score-results d-flex justify-content-center'>You should listen to {winner} music, here is a playlist for you! </h3>
                 <div className="text-center mt-5">
                 <Link to="/dashboard" className="text-success">
                   <button className="btn btn-md btn-warning mt-1">Back to Dashboard</button>
