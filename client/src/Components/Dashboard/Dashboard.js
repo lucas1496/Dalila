@@ -28,19 +28,19 @@ class Dashboard extends Component {
                 <h3>
                   You are Successfully logged in to DALILA,  let's find you some tunes!
                 </h3>
+                <p className="text-center">
+                        Ready to begin?
+                        <br></br>
+                        <Link to="/quiz" className="text-success">
+                          <button className="btn btn-md btn-success mt-5">Start Quiz</button>
+                        </Link>
+                      </p>
                 <button
                   onClick={this.onLogoutClick}
                   className="btn btn-lg btn-warning mt-5"
                 >
                   Logout
                 </button>
-                <p className="text-center">
-                        Ready to start?
-                        <br></br>
-                        <Link to="/quiz" className="text-success">
-                          Start Quiz
-                        </Link>
-                      </p>
               </div>
             </div>
           </div>
