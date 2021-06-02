@@ -29,7 +29,7 @@ export default function StartQuiz() {
                 { answerText: 'I rather sing than play an instrument', musicType: 'pop' },
                 { answerText: 'Drums', musicType: 'rock' },
                 { answerText: 'Piano', musicType: 'hiphop' },
-                { answerText: 'Clubbing', musicType: 'country' },
+                { answerText: 'Didgeridoo', musicType: 'country' },
             ],
 
         },
@@ -40,6 +40,7 @@ export default function StartQuiz() {
                 { answerText: 'Persistent', musicType: 'rock' },
                 { answerText: 'Confident', musicType: 'hiphop' },
                 { answerText: 'Creative', musicType: 'country' },
+
             ],
         },
         {
@@ -49,6 +50,7 @@ export default function StartQuiz() {
                 { answerText: 'United Kingdom', musicType: 'rock' },
                 { answerText: 'Mexico', musicType: 'hiphop' },
                 { answerText: 'Germany', musicType: 'country' },
+
             ],
         },
 
@@ -63,6 +65,7 @@ export default function StartQuiz() {
     });
     
     const [showScore, SetShowScore] = useState(false)
+
 
     console.log(developerState.poplevel);
       
@@ -79,28 +82,33 @@ export default function StartQuiz() {
             case 'rock':
 
                 setDeveloperState({...developerState,rocklevel: developerState.rocklevel + 1,});
+
                 break;
 
             case 'hiphop':
 
-                setDeveloperState({...developerState,rocklevel: developerState.hiphoplevel + 1,});
+
+                setDeveloperState({...developerState,rocklevel: developerState.hiphoplevel + 1900,});
                     break;
 
             case 'country':
 
-                setDeveloperState({...developerState,rocklevel: developerState.country + 1,});
+                setDeveloperState({...developerState,rocklevel: developerState.country + 1650,});
                     break;
 
       }
         
 
 
+
         const nextQuestion = currentQuestion + 1;
         if (nextQuestion < questions.length) {
             SetCurrentQuestion(nextQuestion);
         } else {
+
             SetShowScore(true)
         }}
+
 
 
 
@@ -111,9 +119,10 @@ export default function StartQuiz() {
         <div className="Quiz"> 
 
             {showScore ? (
-                <div className='score-results'> here goes your playlist suggestion </div>
+                <div className='score-results d-flex justify-content-center'> here goes your playlist suggestion  {} </div>
             ) : (
                 <>
+
                 <div className='container'>
                     <div className='question-section d-flex justify-content-center'>
                         <div>Dalila wants to know...</div>
@@ -130,6 +139,7 @@ export default function StartQuiz() {
                     <div>Hip-hop Level: {developerState.hiphoplevel}</div>
                     <div>Country Level: {developerState.countrylevel}</div>
                 </div>
+
 
                 </>
             )}
