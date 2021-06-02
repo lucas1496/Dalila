@@ -14,7 +14,8 @@ import setAuthToken from './utils/setAuthToken';
 import { setCurrentUser, logoutUser } from './redux/actions/authActions';
 import PrivateRoute from './Components/private-route/PrivateRoute';
 import Dashboard from './Components/Dashboard/Dashboard';
-import Quiz from './Components/Quiz/Quiz.js'
+import Quiz from './Components/Quiz/Quiz.js';
+import Tracks from './Components/Tracks/Tracks'
 
 function App() {
   // Check for token to keep user logged in
@@ -43,6 +44,7 @@ function App() {
           <Route path="/register" component={Register} />
           <Route path="/login" component={Login} />
           <Route path="/quiz" component={Quiz} />
+          <Route path="/searchplaylists" component={Tracks} />
           <Switch>
             <PrivateRoute exact path="/dashboard" component={Dashboard} />
             <Route path="*" component={NotFound} />

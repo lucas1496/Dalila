@@ -93,7 +93,7 @@ class Login extends Component {
                       <input
                         type="password"
                         className="input-control"
-                        placeholder="Enter your password"
+                        placeholder="Enter your password"   
                         id="password"
                         value={password}
                         onChange={this.onChangeLogin}

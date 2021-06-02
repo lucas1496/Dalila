@@ -34,6 +34,10 @@ class Dashboard extends Component {
                         <Link to="/quiz" className="text-success">
                           <button className="btn btn-md btn-success mt-5">Start Quiz</button>
                         </Link>
+                        <br></br>
+                        <Link to="searchplaylists" className="text-success">
+                          <button className="btn btn-md btn-success mt-5">Start Search Playlist</button>
+                        </Link>
                       </p>
                 <button
                   onClick={this.onLogoutClick}
@@ -41,6 +45,7 @@ class Dashboard extends Component {
                 >
                   Logout
                 </button>
+             
               </div>
             </div>
           </div>

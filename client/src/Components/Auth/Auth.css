@@ -79,15 +79,19 @@
 }
 form label {
     color: #040514 !important;
+    
   }
 
 form input::placeholder {
   font-size: 12px;
   letter-spacing: 0.5px;
+  color: blue;
+  
 }
 form input {
     border-radius: 4px;
     height: 2rem;
     width: 18rem;
+    color: blue;
 }
 
