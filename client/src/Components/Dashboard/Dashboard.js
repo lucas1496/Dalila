@@ -26,26 +26,26 @@ class Dashboard extends Component {
                   Hi, <b>{user.name.split(' ')[0]}! </b>
                 </h1>
                 <h3>
-                  You are Successfully logged in to DALILA,  let's find you some tunes!
+                  You are Successfully logged in to Dalila,  let's find you some tunes!
                 </h3>
-                <p className="text-center">
-                        Ready to begin?
-                        <br></br>
+                <div className="text-center">
+                <p className="text-center">Ready to begin?</p>
                         <Link to="/quiz" className="text-success">
-                          <button className="btn btn-md btn-success mt-5">Start Quiz</button>
+                          <button className="btn btn-md btn-success mt-1">Start Quiz</button>
                         </Link>
                         <br></br>
+                        <br></br>
+                        <p className="text-center">Want to search?</p>
                         <Link to="searchplaylists" className="text-success">
-                          <button className="btn btn-md btn-success mt-5">Start Search Playlist</button>
+                          <button className="btn btn-md btn-success mt-1">Search Playlists</button>
                         </Link>
-                      </p>
-                <button
+                      </div>
+                      <button
                   onClick={this.onLogoutClick}
                   className="btn btn-lg btn-warning mt-5"
                 >
                   Logout
                 </button>
-             
               </div>
             </div>
           </div>
