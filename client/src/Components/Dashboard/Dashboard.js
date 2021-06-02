@@ -41,7 +41,6 @@ class Dashboard extends Component {
                 >
                   Logout
                 </button>
-<<<<<<< HEAD
                 <p>
                         Ready to start?
                         <Link to="/quiz" className="text-success">
@@ -54,8 +53,6 @@ class Dashboard extends Component {
                           Start Search Playlist
                         </Link>
                       </p>
-=======
->>>>>>> main
               </div>
             </div>
           </div>

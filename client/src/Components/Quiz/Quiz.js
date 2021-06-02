@@ -8,17 +8,10 @@ export default function StartQuiz() {
         {
             questionText: 'Which animal do you like the most?',
             answerOptions: [
-<<<<<<< HEAD
                 { answerText: 'Hippopotamus', musicType: 'rock' },
                 { answerText: 'Cat', musicType: 'pop' },
                 { answerText: 'Wolf', musicType: 'hiphop' },
                 { answerText: 'kangaroo', musicType: 'country' },
-=======
-                { answerText: 'Hippopotamus', isCorrect: false },
-                { answerText: 'Cat', isCorrect: false },
-                { answerText: 'Wolf', isCorrect: false },
-                { answerText: 'Kangaroo', isCorrect: true },
->>>>>>> main
             ],
         },
         {
@@ -33,17 +26,10 @@ export default function StartQuiz() {
         {
             questionText: 'Which instrument are you most interested in?',
             answerOptions: [
-<<<<<<< HEAD
                 { answerText: 'I rather sing than play an instrument', musicType: 'pop' },
                 { answerText: 'Drums', musicType: 'rock' },
                 { answerText: 'Piano', musicType: 'hiphop' },
                 { answerText: 'Clubbing', musicType: 'country' },
-=======
-                { answerText: 'I rather sing than play an instrument', isCorrect: false },
-                { answerText: 'Drums', isCorrect: false },
-                { answerText: 'Piano', isCorrect: false },
-                { answerText: 'Didgeridoo', isCorrect: true },
->>>>>>> main
             ],
 
         },
