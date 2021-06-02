@@ -40,12 +40,6 @@ class Dashboard extends Component {
                           <button className="btn btn-md btn-success mt-1">Search Playlists</button>
                         </Link>
                       </div>
-                      <button
-                  onClick={this.onLogoutClick}
-                  className="btn btn-lg btn-warning mt-5"
-                >
-                  Logout
-                </button>
               </div>
             </div>
           </div>
