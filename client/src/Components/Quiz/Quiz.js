@@ -6,16 +6,23 @@ import './Quiz.css'
 export default function StartQuiz() {
     const questions = [
         {
-            questionText: 'What animal do you like the most?',
+            questionText: 'Which animal do you like the most?',
             answerOptions: [
+<<<<<<< HEAD
                 { answerText: 'Hippopotamus', musicType: 'rock' },
                 { answerText: 'Cat', musicType: 'pop' },
                 { answerText: 'Wolf', musicType: 'hiphop' },
                 { answerText: 'kangaroo', musicType: 'country' },
+=======
+                { answerText: 'Hippopotamus', isCorrect: false },
+                { answerText: 'Cat', isCorrect: false },
+                { answerText: 'Wolf', isCorrect: false },
+                { answerText: 'Kangaroo', isCorrect: true },
+>>>>>>> main
             ],
         },
         {
-            questionText: 'What activity would you rather do?',
+            questionText: 'Which activity would you rather do?',
             answerOptions: [
                 { answerText: 'Wine tasting', musicType: 'pop' },
                 { answerText: 'Weapon Forging', musicType: 'rock' },
@@ -26,10 +33,17 @@ export default function StartQuiz() {
         {
             questionText: 'Which instrument are you most interested in?',
             answerOptions: [
+<<<<<<< HEAD
                 { answerText: 'I rather sing than play an instrument', musicType: 'pop' },
                 { answerText: 'Drums', musicType: 'rock' },
                 { answerText: 'Piano', musicType: 'hiphop' },
                 { answerText: 'Clubbing', musicType: 'country' },
+=======
+                { answerText: 'I rather sing than play an instrument', isCorrect: false },
+                { answerText: 'Drums', isCorrect: false },
+                { answerText: 'Piano', isCorrect: false },
+                { answerText: 'Didgeridoo', isCorrect: true },
+>>>>>>> main
             ],
 
         },
@@ -105,10 +119,13 @@ export default function StartQuiz() {
 
 
     return (
+        <div className="bigcontainerQuiz">
+      <iframe src='https://my.spline.design/quizpage-e26d19a63fcfd20fc847893571ab4270/' frameborder='0' width='100%' height='100%'></iframe>
+        <div className ="contentcontainerQuiz">
         <div className="Quiz"> 
 
             {showScore ? (
-                <div className='score-results d-flex justify-content-center'> here goes your playlist suggestion </div>
+                <div className='score-results'> here goes your playlist suggestion </div>
             ) : (
                 <>
                 <div className='container'>
@@ -132,6 +149,8 @@ export default function StartQuiz() {
             )}
 
          
+        </div>
+        </div>
         </div>
     );
 
