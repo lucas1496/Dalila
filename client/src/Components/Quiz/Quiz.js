@@ -5,16 +5,16 @@ import './Quiz.css'
 export default function StartQuiz() {
     const questions = [
         {
-            questionText: 'What animal do you like the most?',
+            questionText: 'Which animal do you like the most?',
             answerOptions: [
                 { answerText: 'Hippopotamus', isCorrect: false },
                 { answerText: 'Cat', isCorrect: false },
                 { answerText: 'Wolf', isCorrect: false },
-                { answerText: 'kangaroo', isCorrect: true },
+                { answerText: 'Kangaroo', isCorrect: true },
             ],
         },
         {
-            questionText: 'What activity would you rather do?',
+            questionText: 'Which activity would you rather do?',
             answerOptions: [
                 { answerText: 'Wine tasting', isCorrect: false },
                 { answerText: 'Weapon Forging', isCorrect: false },
@@ -28,7 +28,7 @@ export default function StartQuiz() {
                 { answerText: 'I rather sing than play an instrument', isCorrect: false },
                 { answerText: 'Drums', isCorrect: false },
                 { answerText: 'Piano', isCorrect: false },
-                { answerText: 'Clubbing', isCorrect: true },
+                { answerText: 'Didgeridoo', isCorrect: true },
             ],
 
         },
@@ -67,9 +67,12 @@ export default function StartQuiz() {
     }
 
     return (
+        <div className="bigcontainerQuiz">
+      <iframe src='https://my.spline.design/quizpage-e26d19a63fcfd20fc847893571ab4270/' frameborder='0' width='100%' height='100%'></iframe>
+        <div className ="contentcontainerQuiz">
         <div className="Quiz"> 
             {showScore ? (
-                <div className='score-results d-flex justify-content-center'> here goes your playlist suggestion </div>
+                <div className='score-results'> here goes your playlist suggestion </div>
             ) : (
                 <>
                 <div className='container'>
@@ -88,6 +91,8 @@ export default function StartQuiz() {
             )}
 
 
+        </div>
+        </div>
         </div>
     );
 
