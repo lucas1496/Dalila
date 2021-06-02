@@ -110,9 +110,6 @@ export default function StartQuiz() {
             SetShowScore(true)
         }}
 
-
-
-
     return (
         <div className="bigcontainerQuiz">
       <iframe src='https://my.spline.design/quizpage-e26d19a63fcfd20fc847893571ab4270/' frameborder='0' width='100%' height='100%'></iframe>
