@@ -5,6 +5,7 @@ import Jumbotron from "../../Components/Jumbotron";
 import { Col, Row, Container } from "../../Components/Grid";
 import { List, ListItem } from "../../Components/List";
 import SearchForm from "../../Components/SearchForm";
+import './style.css'
 
 // const Tracks = () => {
 
@@ -83,7 +84,7 @@ import SearchForm from "../../Components/SearchForm";
 	  </Jumbotron>
 			 <Col size="md-12 sm-12">
             {/* <Jumbotron> */}
-              <h1>Playlists On My List</h1>
+              <h1>Playlists</h1>
             {/* </Jumbotron> */}
             {playlists.length ? (
               <List>
@@ -97,7 +98,7 @@ import SearchForm from "../../Components/SearchForm";
                 ))}
               </List>
             ) : (
-              <h3>No Results to Display</h3>
+              <h3>No Results Currently</h3>
             )}
           </Col>
 		</div>

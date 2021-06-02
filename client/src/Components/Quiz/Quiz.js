@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Jumbotron from "../../Components/Jumbotron";
+import { Link, withRouter } from 'react-router-dom';
 import './Quiz.css'
 
 
@@ -119,27 +120,37 @@ export default function StartQuiz() {
         <div className="Quiz"> 
 
             {showScore ? (
-                <div className='score-results d-flex justify-content-center'> here goes your playlist suggestion  {} </div>
+                <div>
+                <h3 className='score-results d-flex justify-content-center'> Here is your playlist suggestion!  {} </h3>
+                <div className="text-center mt-5">
+                <Link to="/dashboard" className="text-success">
+                  <button className="btn btn-md btn-warning mt-1">Back to Dashboard</button>
+                </Link>
+                </div>
+                </div>
             ) : (
                 <>
 
                 <div className='container'>
                     <div className='question-section d-flex justify-content-center'>
-                        <div>Dalila wants to know...</div>
-                       
+                        <h3>Dalila wants to know...</h3>
                     </div>
-                    <div className='question-text d-flex justify-content-center'>{questions[currentQuestion].questionText}</div>
+                    <h4 className='question-text d-flex justify-content-center'>{questions[currentQuestion].questionText}</h4>
                     <div className='answer-section d-flex justify-content-center'>
                         {questions[currentQuestion].answerOptions.map((answerOption) => (
-                            <button onClick={()=> handleAnswerButtonClick(answerOption.musicType)} >{answerOption.answerText}</button>
+                            <button className="btn btn-md btn-success" onClick={()=> handleAnswerButtonClick(answerOption.musicType)} >{answerOption.answerText}</button>
                         ))}
                     </div>
-                    <div>Pop Level: {developerState.poplevel}</div>
+                    {/* <div>Pop Level: {developerState.poplevel}</div>
                     <div>Rock Level: {developerState.rocklevel}</div>
                     <div>Hip-hop Level: {developerState.hiphoplevel}</div>
-                    <div>Country Level: {developerState.countrylevel}</div>
+                    <div>Country Level: {developerState.countrylevel}</div> */}
                 </div>
-
+                <div className="text-center mt-5">
+                        <Link to="/dashboard" className="text-success">
+                          <button className="btn btn-md btn-warning mt-1">Back to Dashboard</button>
+                        </Link>
+               </div>
 
                 </>
             )}
