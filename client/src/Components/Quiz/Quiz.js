@@ -12,7 +12,7 @@ export default function StartQuiz() {
                 { answerText: 'Hippopotamus', musicType: 'rock' },
                 { answerText: 'Cat', musicType: 'pop' },
                 { answerText: 'Wolf', musicType: 'hiphop' },
-                { answerText: 'kangaroo', musicType: 'country' },
+                { answerText: 'Kangaroo', musicType: 'country' },
             ],
         },
         {
