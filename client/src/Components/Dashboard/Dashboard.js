@@ -30,14 +30,14 @@ class Dashboard extends Component {
                 </h3>
                 <div className="text-center">
                 <p className="text-center">Ready to begin?</p>
-                        <Link to="/quiz" className="text-success">
-                          <button className="btn btn-md btn-success mt-1">Start Quiz</button>
+                        <Link to="/quiz" className="text-dark">
+                          <button className="btn btn-md btn-dark mt-1 big-button">Start Quiz</button>
                         </Link>
                         <br></br>
                         <br></br>
                         <p className="text-center">Want to search?</p>
-                        <Link to="searchplaylists" className="text-success">
-                          <button className="btn btn-md btn-success mt-1">Search Playlists</button>
+                        <Link to="searchplaylists" className="text-dark">
+                          <button className="btn btn-md btn-dark mt-1 big-button">Search Playlists</button>
                         </Link>
                       </div>
               </div>

@@ -135,7 +135,7 @@ export default function StartQuiz() {
                 <h3 className='score-results d-flex justify-content-center'>You should listen to {winner} music, here is a playlist for you! </h3>
                 <div className="text-center mt-5">
                 <Link to="/dashboard" className="text-success">
-                  <button className="btn btn-md btn-warning mt-1">Back to Dashboard</button>
+                  <button className="btn btn-md btn-warning mt-1 big-button-1">Back to Dashboard</button>
                 </Link>
                 </div>
                 </div>
@@ -149,7 +149,7 @@ export default function StartQuiz() {
                     <h4 className='question-text d-flex justify-content-center'>{questions[currentQuestion].questionText}</h4>
                     <div className='answer-section d-flex justify-content-center'>
                         {questions[currentQuestion].answerOptions.map((answerOption) => (
-                            <button className="btn btn-md btn-success" onClick={()=> handleAnswerButtonClick(answerOption.musicType)} >{answerOption.answerText}</button>
+                            <button className="btn btn-md btn-dark big-button" onClick={()=> handleAnswerButtonClick(answerOption.musicType)} >{answerOption.answerText}</button>
                         ))}
                     </div>
                     {/* <div>Pop Level: {developerState.poplevel}</div>
@@ -159,7 +159,7 @@ export default function StartQuiz() {
                 </div>
                 <div className="text-center mt-5">
                         <Link to="/dashboard" className="text-success">
-                          <button className="btn btn-md btn-warning mt-1">Back to Dashboard</button>
+                          <button className="btn btn-md btn-warning mt-1 big-button-1">Back to Dashboard</button>
                         </Link>
                </div>
 
