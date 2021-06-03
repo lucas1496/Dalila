@@ -56,6 +56,46 @@ export default function StartQuiz() {
         },
 
     ];
+
+    const popList = [
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX0b1hHYQtJjp" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>,
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWTwnEm1IYyoj" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>,
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXbYM3nMM0oPk" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>,
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWjGdmeTyeJ6" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>,
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWZQaaqNMbbXa" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    ]
+    let popSelection = popList[Math.floor(Math.random()* popList.length)];
+
+    const rockList= [
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWXRqgorJj26U" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>,
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX1spT6G94GFC" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>,
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX82Zzp6AKx64" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>,
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX68H8ZujdnN7" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>,
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWGFQLoP9qlv" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    ]
+    let rockSelection = rockList[Math.floor(Math.random()* rockList.length)];
+
+    const hiphopList= [
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX186v583rmzp" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>,
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX6xZZEgC9Ubl" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>,
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWTJzNR1J5ygQ" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>,
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX5hR0J49CmXC" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>,
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWIfrT204w7E" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    ]
+    let hiphopSelection = hiphopList[Math.floor(Math.random()* hiphopList.length)];
+
+    const electronicList = [
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX0r3x8OtiwEM" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>,
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXdgz8ZB7c2CP" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>,
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX1T3AaSrgy9r" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>,
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX1jlzMTQ2PY5" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>,
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX00RdhV73Dbe" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> 
+    ]
+    let electronicSelection = electronicList[Math.floor(Math.random()* electronicList .length)];
+
+
+    const [selectedPlaylist, SetSelectedPlaylist] = useState('')
+
     const [currentQuestion, SetCurrentQuestion] = useState(0);
 
     const [showScore, SetShowScore] = useState(false)
@@ -66,11 +106,20 @@ export default function StartQuiz() {
         rock: 0,
         electronic: 0
     })
-    
+
 
     const [winner, SetWinner] = useState("")
+    // if (winner === 'pop') {
+    //     SetSelectedPlaylist(popSelection)
+    // } if (winner === 'hiphop') {
+    //     SetSelectedPlaylist(hiphopSelection)
+    // } if (winner === 'rock') {
+    //     SetSelectedPlaylist(rockSelection)
+    // } else{
+    //     SetSelectedPlaylist(electronicSelection )
+    // } 
 
-    const handleAnswerButtonClick = (musicType,) => {
+    const handleAnswerButtonClick = (musicType) => {
 
         switch (musicType) {
             case 'pop':
@@ -111,19 +160,16 @@ export default function StartQuiz() {
                     biggest = highestScore[i][1];
 
                     categoryWinner = highestScore[i][0];
-                    console.log(categoryWinner);
 
                     SetWinner(categoryWinner);
-
                 }
             }
             SetShowScore(true);
-
-
-
         }
 
     }
+    
+
     return (
         <div className="bigcontainerQuiz">
       <iframe src='https://my.spline.design/quizpage-e26d19a63fcfd20fc847893571ab4270/' frameBorder='0' width='100%' height='100%'></iframe>
@@ -133,6 +179,7 @@ export default function StartQuiz() {
             {showScore ? (
                 <div>
                 <h3 className='score-results d-flex justify-content-center'>You should listen to {winner} music, here is a playlist for you! </h3>
+                <div className='d-flex justify-content-center'> {selectedPlaylist} </div>
                 <div className="text-center mt-5">
                 <Link to="/dashboard" className="text-success">
                   <button className="btn btn-md btn-warning mt-1 big-button-1">Back to Dashboard</button>
@@ -163,12 +210,12 @@ export default function StartQuiz() {
                         </Link>
                </div>
 
-                </>
-            )}
+                        </>
+                    )}
 
-         
-        </div>
-        </div>
+
+                </div>
+            </div>
         </div>
     );
 
