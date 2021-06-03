@@ -126,7 +126,7 @@ export default function StartQuiz() {
     }
     return (
         <div className="bigcontainerQuiz">
-      <iframe src='https://my.spline.design/quizpage-e26d19a63fcfd20fc847893571ab4270/' frameborder='0' width='100%' height='100%'></iframe>
+      <iframe src='https://my.spline.design/quizpage-e26d19a63fcfd20fc847893571ab4270/' frameBorder='0' width='100%' height='100%'></iframe>
         <div className ="contentcontainerQuiz">
         <div className="Quiz"> 
 
