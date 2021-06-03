@@ -91,7 +91,7 @@ import './style.css'
                 {playlists.map(playlist => (
                   <ListItem >
                        <strong>
-                        <a href={playlist.external_urls.spotify}>{playlist.name} </a>
+                        <a href={playlist.external_urls.spotify} target="_blank">{playlist.name} </a>
                       </strong>
                    
                   </ListItem>
