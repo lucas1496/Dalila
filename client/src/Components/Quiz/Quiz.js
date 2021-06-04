@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect, useRef } from 'react';
 import Jumbotron from "../../Components/Jumbotron";
 import { Link, withRouter } from 'react-router-dom';
 import './Quiz.css'
@@ -56,7 +56,7 @@ export default function StartQuiz() {
         },
 
     ];
-
+    let categoryWinner = null;
     const popList = [
         <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX0b1hHYQtJjp" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>,
         <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWTwnEm1IYyoj" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>,
@@ -109,15 +109,35 @@ export default function StartQuiz() {
 
 
     const [winner, SetWinner] = useState("")
-    // if (winner === 'pop') {
-    //     SetSelectedPlaylist(popSelection)
-    // } if (winner === 'hiphop') {
-    //     SetSelectedPlaylist(hiphopSelection)
-    // } if (winner === 'rock') {
-    //     SetSelectedPlaylist(rockSelection)
-    // } else{
-    //     SetSelectedPlaylist(electronicSelection )
-    // } 
+
+const determineWinner =() => {
+    console.log(winner)
+    switch (winner) {
+        
+        case 'pop': 
+        console.log(popSelection)
+            SetSelectedPlaylist(popSelection)
+            break;
+            
+
+        case 'rock':
+            console.log(rockSelection)
+            SetSelectedPlaylist(rockSelection)
+            break;
+
+        case 'hiphop':
+            console.log(hiphopSelection)
+            SetSelectedPlaylist(hiphopSelection)
+            break;
+
+        case 'electronic':
+            console.log(electronicSelection)
+            SetSelectedPlaylist(electronicSelection)
+            break;
+
+    }
+}
+console.log(winner)
 
     const handleAnswerButtonClick = (musicType) => {
 
@@ -125,6 +145,7 @@ export default function StartQuiz() {
             case 'pop':
 
                 SetScore({ ...score, pop: score.pop + 1500, })
+                
                 break;
 
             case 'rock':
@@ -154,21 +175,38 @@ export default function StartQuiz() {
             const highestScore = Object.entries(score);
             console.log(highestScore)
             let biggest = 0;
-            let categoryWinner = null;
+            categoryWinner = null;
             for (let i = 0; i < highestScore.length; i++) {
                 if (highestScore[i][1] > biggest) {
                     biggest = highestScore[i][1];
 
                     categoryWinner = highestScore[i][0];
+                    
 
-                    SetWinner(categoryWinner);
+                
+                    // console.log('category winner' + categoryWinner)
+                    // SetSelectedPlaylist(categoryWinner);
                 }
             }
+            SetWinner(categoryWinner);
+            console.log(winner)
             SetShowScore(true);
+            
+
         }
 
     }
-    
+    const isInitialMount = useRef(true)
+    useEffect(()=>{
+       console.log(isInitialMount)
+        if (isInitialMount.current){
+            console.log('inside if')
+            isInitialMount.current = false
+        } else {
+            console.log('inside else')
+            determineWinner()}
+       
+    },[winner])
 
     return (
         <div className="bigcontainerQuiz">
