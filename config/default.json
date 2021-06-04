@@ -1,4 +1,4 @@
 {
-    "mongoURI": "mongodb://localhost/TestDB",
+    "mongoURI": "mongodb+srv://pigodidog:Buck.144@mycluster.m8w5n.mongodb.net/daliladb?retryWrites=true&w=majority",
     "secretOrKey": "secret"
 }
