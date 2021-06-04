@@ -4,10 +4,13 @@ const passport = require("passport");
 const usersRouter = require("./routes/api/users");
 const config = require('config');
 const app = express();
+
+const port = process.env.PORT || 3001;
+
 // Body parser middleware
 app.use(
     express.urlencoded({
-        extended: false
+        extended: true
     })
 );
 app.use(express.json());
@@ -41,5 +44,5 @@ if (process.env.NODE_ENV = "production") {
     });
 };
 
-const port = process.env.PORT || 3001;
+
 app.listen(port, () => console.log(`Server up and running on port ${port} !`));
