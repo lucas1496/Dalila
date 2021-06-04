@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 //用來作圖
 import axios from 'axios';
 import Jumbotron from "../../Components/Jumbotron";
-import { Col, Row, Container } from "../../Components/Grid";
+import { Col, Container } from "../../Components/Grid";
 import { List, ListItem } from "../../Components/List";
 import SearchForm from "../../Components/SearchForm";
 import './style.css'
@@ -91,7 +91,7 @@ import './style.css'
                 {playlists.map(playlist => (
                   <ListItem >
                        <strong>
-                        <a href={playlist.external_urls.spotify} target="_blank">{playlist.name} </a>
+                        <a href={playlist.external_urls.spotify} target="_blank" rel="noopener noreferrer">{playlist.name} </a>
                       </strong>
                    
                   </ListItem>

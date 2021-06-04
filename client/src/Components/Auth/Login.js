@@ -52,7 +52,7 @@ class Login extends Component {
     const { email, password, errors } = this.state;
     return (
       <div className="bigcontainerLogin">
-      <iframe src='https://my.spline.design/setuppage1-26562f0bef0903cde358c90d8096b926/' frameborder='0' width='100%' height='100%'></iframe>
+      <iframe src='https://my.spline.design/setuppage1-26562f0bef0903cde358c90d8096b926/' frameborder='0' width='100%' height='100%' title="Background with a bed and a computer"></iframe>
         <div className ="contentcontainerLogin">
       <section className="login">
         <div className="container">

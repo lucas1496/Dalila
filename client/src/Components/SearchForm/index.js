@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import "./style.css";
 
 // Using the datalist element we can create autofill suggestions based on the props.breeds array
