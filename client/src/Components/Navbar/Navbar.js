@@ -18,11 +18,7 @@ class Navbar extends Component {
     this.setState({showLogout: true});
   };
 
-  // componentDidMount = () => {
-  //   window.location.reload();
-  // }
-
-
+  
   render() {
     console.log(this.state.showLogout);
     if (this.state.showLogout === true) {
