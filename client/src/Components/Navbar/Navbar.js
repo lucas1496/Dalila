@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { logoutUser, setCurrentUser } from '../../redux/actions/authActions';
-import { Link, Redirect } from 'react-router-dom';
+import { logoutUser } from '../../redux/actions/authActions';
+import { Link } from 'react-router-dom';
 import logo from "../../assets/dalilalogo.png"
 import './Navbar.css';
 
@@ -26,7 +26,7 @@ class Navbar extends Component {
       <nav className="navbar navbar-expand-md navbar-dark fixed-top">
         <div className="container">
           <Link className="navbar-brand border-none" to="/">
-            <img src= {logo} />
+            <img src= {logo} alt="Dalila"/>
           </Link>
           <div className="collapse navbar-collapse" id="collapsibleNavId">
             <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
@@ -61,7 +61,7 @@ class Navbar extends Component {
       <nav className="navbar navbar-expand-md navbar-dark fixed-top">
         <div className="container">
           <Link className="navbar-brand border-none" to="/">
-            <img src= {logo} />
+            <img src= {logo} alt="Dalila"/>
           </Link>
           <div className="collapse navbar-collapse" id="collapsibleNavId">
             <ul className="navbar-nav ml-auto mt-2 mt-lg-0">

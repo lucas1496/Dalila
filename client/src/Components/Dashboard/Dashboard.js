@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { logoutUser } from '../../redux/actions/authActions';
 import './Dashboard.css';
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class Dashboard extends Component {
   onLogoutClick = e => {
@@ -15,7 +15,7 @@ class Dashboard extends Component {
     const { user } = this.props.auth;
     return (
       <div className="bigcontainerLogged">
-      <iframe src='https://my.spline.design/loggedin-1825477584b930b7dee21233721b9765/' frameBorder='0' width='100%' height='100%'></iframe>
+      <iframe src='https://my.spline.design/loggedin-1825477584b930b7dee21233721b9765/' frameBorder='0' width='100%' height='100%' title="Background with cars that move up a ramp"></iframe>
         <div className ="contentcontainerLogged">
       <section className="dashboard">
         <div className="container">
