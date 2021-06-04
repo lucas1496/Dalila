@@ -4,6 +4,7 @@ const passport = require("passport");
 const usersRouter = require("./routes/api/users");
 const config = require('config');
 const app = express();
+const path = require('path');
 
 const port = process.env.PORT || 3001;
 
