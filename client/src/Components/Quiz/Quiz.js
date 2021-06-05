@@ -214,7 +214,7 @@ console.log(winner)
 
             {showScore ? (
                 <div>
-                <h3 className='score-results d-flex justify-content-center'>You should listen to {winner} music, here is a playlist for you! </h3>
+                <h3 className='score-results d-flex justify-content-center'>You should listen to {winner}, here is a playlist for you! </h3>
                 <div className='d-flex justify-content-center'> {selectedPlaylist} </div>
                 <div className="text-center mt-5">
                 <Link to="/dashboard" className="text-success">
