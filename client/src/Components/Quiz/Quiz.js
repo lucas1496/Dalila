@@ -179,11 +179,6 @@ console.log(winner)
                     biggest = highestScore[i][1];
 
                     categoryWinner = highestScore[i][0];
-                    
-
-                
-                    // console.log('category winner' + categoryWinner)
-                    // SetSelectedPlaylist(categoryWinner);
                 }
             }
             SetWinner(categoryWinner);
@@ -235,10 +230,6 @@ console.log(winner)
                             <button className="btn btn-md btn-dark big-button" onClick={()=> handleAnswerButtonClick(answerOption.musicType)} >{answerOption.answerText}</button>
                         ))}
                     </div>
-                    {/* <div>Pop Level: {developerState.poplevel}</div>
-                    <div>Rock Level: {developerState.rocklevel}</div>
-                    <div>Hip-hop Level: {developerState.hiphoplevel}</div>
-                    <div>Country Level: {developerState.countrylevel}</div> */}
                 </div>
                 <div className="text-center mt-5">
                         <Link to="/dashboard" className="text-success">
