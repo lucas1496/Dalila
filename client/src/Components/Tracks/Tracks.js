@@ -13,13 +13,9 @@ import './style.css'
 
 	// Set up states for retrieving access token and top tracks
 	const [token, setToken] = useState('');
-	// const [tracks, setTracks] = useState([]);
     const [playlists, setPlaylists] = useState([]);
 	const [categoryid , setCategoryid] = useState("");
 
-	// // Artist ID from Spotify
-	// const id = '06HL4z0CvFAxyc27GXpf02';
-	// const category_id = 'rock';
 
 	useEffect(()=>{
 		if (!categoryid) {
@@ -48,16 +44,8 @@ import './style.css'
 				
 			}).then(res=> {
 				console.log(res.data.playlists.items);
-				// console.log(res.data.tracks[0].artists[0]);
-                //console singer information
+
 				setPlaylists(res.data.playlists.items);
-				// res.data.playlists.items.map(playlist=>{
-                //     return {
-                //         title: playlist.name
-                //     }
-	
-                // })
-			
 
 			}).catch(error=> console.log(error))
 		
@@ -83,9 +71,7 @@ import './style.css'
       </Container>
 	  </Jumbotron>
 			 <Col size="md-12 sm-12">
-            {/* <Jumbotron> */}
               <h1>Playlists</h1>
-            {/* </Jumbotron> */}
             {playlists.length ? (
               <List>
                 {playlists.map(playlist => (
