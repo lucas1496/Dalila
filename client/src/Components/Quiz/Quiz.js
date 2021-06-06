@@ -57,38 +57,38 @@ export default function StartQuiz() {
     ];
     let categoryWinner = null;
     const popList = [
-        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX0b1hHYQtJjp" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="PopPlaylist1"></iframe>,
-        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWTwnEm1IYyoj" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="PopPlaylist2"></iframe>,
-        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXbYM3nMM0oPk" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="PopPlaylist3"></iframe>,
-        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWjGdmeTyeJ6" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="PopPlaylist4"></iframe>,
-        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWZQaaqNMbbXa" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="PopPlaylist5"></iframe>
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX0b1hHYQtJjp" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="PopPlaylist1" className="tunes"></iframe>,
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWTwnEm1IYyoj" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="PopPlaylist2" className="tunes"></iframe>,
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXbYM3nMM0oPk" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="PopPlaylist3" className="tunes"></iframe>,
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWjGdmeTyeJ6" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="PopPlaylist4" className="tunes"></iframe>,
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWZQaaqNMbbXa" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="PopPlaylist5" className="tunes"></iframe>
     ]
     let popSelection = popList[Math.floor(Math.random()* popList.length)];
 
     const rockList= [
-        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWXRqgorJj26U" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="RockPlaylist1"></iframe>,
-        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX1spT6G94GFC" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="RockPlaylist2"></iframe>,
-        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX82Zzp6AKx64" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="RockPlaylist3"></iframe>,
-        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX68H8ZujdnN7" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="RockPlaylist4"></iframe>,
-        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWGFQLoP9qlv" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="RockPlaylist5"></iframe>
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWXRqgorJj26U" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="RockPlaylist1" className="tunes"></iframe>,
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX1spT6G94GFC" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="RockPlaylist2" className="tunes"></iframe>,
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX82Zzp6AKx64" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="RockPlaylist3" className="tunes"></iframe>,
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX68H8ZujdnN7" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="RockPlaylist4" className="tunes"></iframe>,
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWGFQLoP9qlv" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="RockPlaylist5" className="tunes"></iframe>
     ]
     let rockSelection = rockList[Math.floor(Math.random()* rockList.length)];
 
     const hiphopList= [
-        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX186v583rmzp" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="HipHopPlaylist1"></iframe>,
-        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX6xZZEgC9Ubl" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="HipHopPlaylist2"></iframe>,
-        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWTJzNR1J5ygQ" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="HipHopPlaylist3"></iframe>,
-        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX5hR0J49CmXC" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="HipHopPlaylist4"></iframe>,
-        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWIfrT204w7E" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="HipHopPlaylist5"></iframe>
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX186v583rmzp" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="HipHopPlaylist1" className="tunes"></iframe>,
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX6xZZEgC9Ubl" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="HipHopPlaylist2" className="tunes"></iframe>,
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWTJzNR1J5ygQ" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="HipHopPlaylist3" className="tunes"></iframe>,
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX5hR0J49CmXC" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="HipHopPlaylist4" className="tunes"></iframe>,
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWIfrT204w7E" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="HipHopPlaylist5" className="tunes"></iframe>
     ]
     let hiphopSelection = hiphopList[Math.floor(Math.random()* hiphopList.length)];
 
     const electronicList = [
-        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX0r3x8OtiwEM" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="ElectronicPlaylist1"></iframe>,
-        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXdgz8ZB7c2CP" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="ElectronicPlaylist2"></iframe>,
-        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX1T3AaSrgy9r" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="ElectronicPlaylist3"></iframe>,
-        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX1jlzMTQ2PY5" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="ElectronicPlaylist4"></iframe>,
-        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX00RdhV73Dbe" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="ElectronicPlaylist5"></iframe> 
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX0r3x8OtiwEM" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="ElectronicPlaylist1" className="tunes"></iframe>,
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXdgz8ZB7c2CP" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="ElectronicPlaylist2" className="tunes"></iframe>,
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX1T3AaSrgy9r" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="ElectronicPlaylist3" className="tunes"></iframe>,
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX1jlzMTQ2PY5" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="ElectronicPlaylist4" className="tunes"></iframe>,
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX00RdhV73Dbe" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="ElectronicPlaylist5" className="tunes"></iframe> 
     ]
     let electronicSelection = electronicList[Math.floor(Math.random()* electronicList.length)];
 
